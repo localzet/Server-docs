@@ -1,0 +1,146 @@
+# Простые примеры
+
+## Установка
+
+Запустите следующую команду в пустой директории:
+
+`composer require localzet/server`
+
+## Пример 1. Простой веб-сервис с использованием протокола HTTP
+
+**Создание файла http.php**
+
+```php
+<?php
+
+use loalzet\Server;
+use loalzet\Server\Connection\TcpConnection;
+use loalzet\Server\Protocols\Http\Request;
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+// Создание сервера, слушающего порт 2345 и использующего протокол HTTP
+$server = new Server("http://0.0.0.0:2345");
+
+// Запуск 4 процессов
+$server->count = 4;
+
+// При получении данных от браузера, отправлять "hello world" обратно
+$server->onMessage = function(TcpConnection $connection, Request $request)
+{
+    // Отправляем "hello world" в браузер
+    $connection->send('hello world');
+};
+
+// Запуск сервера
+Server::runAll();
+```
+
+**Запуск через терминал**
+```shell
+php server.php start
+```
+
+**Тестирование**
+
+Предположим, что IP-адрес сервера - 127.0.0.1
+
+Откройте браузер и введите URL http://127.0.0.1:2345
+
+## Пример 2. Простой веб-сервис с использованием протокола WebSocket
+
+**Создание файла websocket.php**
+
+```php
+<?php
+
+use loalzet\Server;
+use loalzet\Server\Connection\TcpConnection;
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+// Обратите внимание: в этом примере используется протокол WebSocket
+$server = new Server("websocket://0.0.0.0:2000");
+
+// Запуск 4 процессов
+$server->count = 4;
+
+// При получении данных от клиента, отправить "hello $data" обратно
+$server->onMessage = function(TcpConnection $connection, $data)
+{
+    // Отправляем "hello $data" клиенту
+    $connection->send('hello ' . $data);
+};
+
+// Запуск сервера
+Server::runAll();
+```
+
+**Запуск через терминал**
+```shell
+php server.php start
+```
+
+**Тестирование**
+
+Откройте браузер Chrome, нажмите F12 для открытия консоли разработчика, на вкладке Console, выполните следующий код (или поместите этот код в HTML-страницу и запустите его с помощью JavaScript):
+
+```javascript
+// Предположим, что IP-адрес сервера - 127.0.0.1
+ws = new WebSocket("ws://127.0.0.1:2000");
+
+ws.onopen = function() {
+    alert("Соединение установлено");
+    ws.send('test');
+    alert("Отправлено серверу: test");
+};
+
+ws.onmessage = function(e) {
+    alert("Получено сообщение от сервера: " + e.data);
+};
+```
+
+## Пример 3. Прямая передача данных по протоколу TCP
+
+**Создание файла tcp.php**
+
+```php
+<?php
+
+use loalzet\Server;
+use loalzet\Server\Connection\TcpConnection;
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+// Создание сервера, слушающего порт 2347 без использования протокола прикладного уровня
+$server = new Server("tcp://0.0.0.0:2347");
+
+// Запуск 4 процессов
+$server->count = 4;
+
+// При получении данных от клиента
+$server->onMessage = function(TcpConnection $connection, $data)
+{
+    // Отправляем "hello $data" клиенту
+    $connection->send('hello ' . $data);
+};
+
+// Запуск сервера
+Server::runAll();
+```
+
+**Запуск через терминал**
+```shell
+php server.php start
+```
+
+**Тестирование через терминал**
+(Приведены команды для Linux; в Windows результат может отличаться)
+```shell
+zorin@msk-1:~# telnet 127.0.0.1 2347
+Trying 127.0.0.1...
+Connected to 127.0.0.1.
+Escape character is '^]'.
+tom
+hello tom
+```

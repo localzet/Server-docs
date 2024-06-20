@@ -38,13 +38,18 @@ const modeScript = `
 export default function Document() {
   return (
     <Html lang="en">
-      <Head>
-        <script dangerouslySetInnerHTML={{ __html: modeScript }} />
-      </Head>
-      <body className="bg-white antialiased dark:bg-zinc-900">
-        <Main />
-        <NextScript />
-      </body>
+        <Head>
+            <script dangerouslySetInnerHTML={{__html: modeScript}}/>
+            <link rel="preconnect" href="https://fonts.googleapis.com"/>
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
+            <link rel="stylesheet" type="text/css"
+                  href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap"/>
+
+        </Head>
+        <body className="bg-white antialiased dark:bg-zinc-900">
+        <Main/>
+        <NextScript/>
+        </body>
     </Html>
   )
 }

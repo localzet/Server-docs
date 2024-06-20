@@ -1,0 +1,67 @@
+# Структура каталогов
+
+```php
+Localzet                                // Основное пространство имён
+├── Server                                  // Ядро Localzet Server
+│   ├── Connection                              // Протоколы транспортного уровня
+│   │   ├── AsyncTcpConnection.php                  // Асинхронное TCP-соединение
+│   │   ├── AsyncUdpConnection.php                  // Асинхронное UPD-соединение
+│   │   ├── ConnectionInterface.php                 // Интерфейс соединения
+│   │   ├── TcpConnection.php                       // Простое TCP-соединения
+│   │   └── UdpConnection.php                       // Простое UPD-соединения
+│   │
+│   ├── Events                                  // Обработка событийных петель
+│   │   ├── Linux                                   // Доп. логика событийной петли Linux
+│   │   ├── Ev.php                                  // Диспетчер событий Libev
+│   │   ├── Event.php                               // Диспетчер событий Libevent
+│   │   ├── EventInterface.php                      // Интерфейс событийной петли
+│   │   ├── Linux.php                               // Событийная петля Linux (libuv / libev / libevent)
+│   │   ├── Swoole.php                              // Диспетчер событий Swoole
+│   │   ├── Swow.php                                // Диспетчер событий Swow
+│   │   └── Windows.php                             // Событийная петля Windows (select)
+│   │
+│   └── Protocols                               // Протоколы прикладного уровня
+│       ├── Http                                    // Доп. логика протокола HTTP
+│       │   ├── Session                                 // Логика хранения сессий
+│       │   │   ├── FileSessionHandler.php                  // Сессии в файлах
+│       │   │   ├── MongoSessionHandler.php                 // Сессии в MongoDB
+│       │   │   ├── RedisClusterSessionHandler.php          // Сессии в RedisCluster
+│       │   │   └── RedisSessionHandler.php                 // Сессии в Redis
+│       │   │
+│       │   ├── Chunk.php                               // HTTP-чанк
+│       │   ├── mime.types                              // Карта соответствия mime-типов
+│       │   ├── Request.php                             // HTTP-запрос
+│       │   ├── Response.php                            // HTTP-ответ
+│       │   ├── ServerSentEvents.php                    // Механизм SSE
+│       │   └── Session.php                             // HTTP-сессия
+│       │
+│       ├── Frame.php                               // Протокол Frame
+│       ├── Http.php                                // Протокол HTTP
+│       ├── Https.php                               // Алиас для протокола HTTP
+│       ├── ProtocolInterface.php                   // Интерфейс протокола
+│       ├── Text.php                                // Протокол Text
+│       ├── Websocket.php                           // Протокол WebSocket-сервера
+│       └── Ws.php                                  // Протокол WebSocket-клиента
+│
+├── Helpers.php                             // Вспомогательные функции
+├── Server.php                              // Server
+└── Timer.php                               // Таймер
+```
+
+[//]: # (## Основное пространство имён &#40;`localzet`&#41;)
+
+[//]: # ()
+[//]: # (Localzet Server - проект Localzet Group, поэтому использует основное пространство имён `localzet\...`)
+
+### `localzer\Server` - Основной класс управления сервером
+
+[//]: # (Содержит как статические свойства и методы, так и динамические.)
+
+[//]: # ()
+[//]: # (- Статические свойства и методы распространяются на все экземпляры Localzet Server.)
+
+[//]: # ()
+[//]: # (    Например свойство `Server::$logFile` устанавливает файл логов для всех последующих экземпляров сервера)
+
+### `localzer\Timer` - Класс управления таймером
+

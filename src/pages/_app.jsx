@@ -21,19 +21,24 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      <Head>
-        {router.pathname === '/' ? (
-          <title>Protocol API Reference</title>
-        ) : (
-          <title>{`${pageProps.title} - Protocol API Reference`}</title>
-        )}
-        <meta name="description" content={pageProps.description} />
-      </Head>
-      <MDXProvider components={mdxComponents}>
-        <Layout {...pageProps}>
-          <Component {...pageProps} />
-        </Layout>
-      </MDXProvider>
+        <Head>
+            {router.pathname === '/' ? (
+                <title>Localzet Documentation</title>
+            ) : (
+                <title>{`${pageProps.title} - Localzet Server`}</title>
+            )}
+            <meta name="description" content={pageProps.description}/>
+
+            <link rel="preconnect" href="https://fonts.googleapis.com"/>
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+            <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap"/>
+
+        </Head>
+        <MDXProvider components={mdxComponents}>
+            <Layout {...pageProps}>
+                <Component {...pageProps} />
+            </Layout>
+        </MDXProvider>
     </>
   )
 }
