@@ -11,8 +11,8 @@ function rehypeParseCodeBlocks() {
     visit(tree, 'element', (node, _nodeIndex, parentNode) => {
       if (node.tagName === 'code' && node.properties.className) {
         parentNode.properties.language = node.properties.className[0]?.replace(
-          /^language-/,
-          ''
+            /^language-/,
+            ''
         )
       }
     })
@@ -24,7 +24,7 @@ let highlighter
 function rehypeShiki() {
   return async (tree) => {
     highlighter =
-      highlighter ?? (await shiki.getHighlighter({ theme: 'css-variables' }))
+        highlighter ?? (await shiki.getHighlighter({ theme: 'css-variables' }))
 
     visit(tree, 'element', (node) => {
       if (node.tagName === 'pre' && node.children[0]?.tagName === 'code') {
@@ -35,8 +35,8 @@ function rehypeShiki() {
 
         if (node.properties.language) {
           let tokens = highlighter.codeToThemedTokens(
-            textNode.value,
-            node.properties.language
+              textNode.value,
+              node.properties.language
           )
 
           textNode.value = shiki.renderToHtml(tokens, {
@@ -70,8 +70,8 @@ function rehypeAddMDXExports(getExports) {
     for (let [name, value] of exports) {
       for (let node of tree.children) {
         if (
-          node.type === 'mdxjsEsm' &&
-          new RegExp(`export\\s+const\\s+${name}\\s*=`).test(node.value)
+            node.type === 'mdxjsEsm' &&
+            new RegExp(`export\\s+const\\s+${name}\\s*=`).test(node.value)
         ) {
           return
         }

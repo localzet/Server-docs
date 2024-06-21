@@ -16,8 +16,8 @@ const slugify = slugifyWithCounter()
 
 function isObjectExpression(node) {
   return (
-    node.type === 'mdxTextExpression' &&
-    node.data?.estree?.body?.[0]?.expression?.type === 'ObjectExpression'
+      node.type === 'mdxTextExpression' &&
+      node.data?.estree?.body?.[0]?.expression?.type === 'ObjectExpression'
   )
 }
 
@@ -59,7 +59,7 @@ export default function (nextConfig = {}) {
             let files = glob.sync('**/*.mdx', { cwd: pagesDir })
             let data = files.map((file) => {
               let url =
-                file === 'index.mdx' ? '/' : `/${file.replace(/\.mdx$/, '')}`
+                  file === 'index.mdx' ? '/' : `/${file.replace(/\.mdx$/, '')}`
               let mdx = fs.readFileSync(path.join(pagesDir, file), 'utf8')
 
               let sections = []

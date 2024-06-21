@@ -41,8 +41,7 @@ module.exports = ({ theme }) => ({
 
             // Base
             color: 'var(--tw-prose-body)',
-            fontSize: theme('fontSize.base')[0],
-            ...theme('fontSize.base')[1],
+            fontSize: theme('fontSize.sm')[0],
             lineHeight: theme('lineHeight.7'),
 
             // Layout
@@ -276,10 +275,6 @@ module.exports = ({ theme }) => ({
             },
             ':is(tbody, tfoot) td:last-child': {
                 paddingRight: '0',
-            },
-
-            'color-theme' :{
-                color: 'var(--tw-prose-links)',
             },
 
             // Inline elements
