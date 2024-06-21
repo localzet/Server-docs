@@ -11,24 +11,24 @@
 
 Запуск в режиме отладки (debug):
 
- ```php server.php start```
+```php server.php start```
 
 Запуск в режиме демона (daemon):
 
- ```php server.php start -d```
+```php server.php start -d```
 
 ### Остановка
- ```php server.php stop```
+```php server.php stop```
 
 ### Перезапуск
- ```php server.php restart```
+```php server.php restart```
 
 ### Бизнес-перезагрузка
- ```php server.php reload```
+```php server.php reload```
 
 ### Просмотр статуса
- ```php server.php status```
- 
+```php server.php status```
+
 ### Просмотр состояния подключений
 ```php server.php connections```
 
@@ -43,7 +43,8 @@
     <Col>
         **При запуске в режиме демона:**
         - Сервер будет продолжать работу в фоновом режиме после закрытия терминала.
-        - Вывод функций, таких как `echo`, `var_dump`, `print`, будет по умолчанию перенаправляться в `/dev/null` или ваш файл, который вы можете задать с помощью `Server::$stdoutFile = '/your/path/file';`.
+        - Вывод функций, таких как `echo`, `var_dump`, `print`, будет по умолчанию перенаправляться в `/dev/null` или
+        ваш файл, который вы можете задать с помощью `Server::$stdoutFile = '/your/path/file';`.
     </Col>
 </Row>
 

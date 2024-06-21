@@ -1,35 +1,32 @@
-import { Guides } from '@/components/Guides'
-import { Resources } from '@/components/Resources'
-import { HeroPattern } from '@/components/HeroPattern'
+import {Guides} from '@/components/Guides'
+import {HeroPattern} from '@/components/HeroPattern'
 
 export const sections = [
-  { title: 'Гайды', id: 'guides' }
+    {title: 'Гайды', id: 'guides'}
 ]
 
-<HeroPattern />
+<HeroPattern/>
 
 # Что такое Localzet Server?
 
 Localzet Server - это высокопроизводительный PHP-сервер с открытым исходным кодом.  В отличие от традиционных MVC фреймворков, Localzet Server представляет собой низкоуровневую и универсальную платформу, позволяющую расширить возможности PHP за пределы стандартной веб-разработки.  {{ className: 'lead' }}
 
-<div className="not-prose mb-16 mt-6 flex gap-3">
-  <Button href="/example" arrow="right" children="Простые примеры" />
-  <Button href="/must-read" variant="outline" children="Ключевые особенности" />
+<div className="mb-16 mt-6 flex gap-3">
+    <Button href="/example" arrow="right" children="Простые примеры"/>
+    <Button href="/must-read" variant="outline" children="Ключевые особенности"/>
 </div>
 
 ## Расширенные возможности {{ anchor: false }}
 
-Localzet Server выходит за рамки традиционных фреймворков, предоставляя разработчикам инструментарий для создания широкого спектра приложений, таких как сообщения в реальном времени, IoT, игры, управление сервисами и другими серверами или промежуточным ПО, что значительно расширяет возможности для PHP-разработчиков. 
+Localzet Server выходит за рамки традиционных фреймворков, предоставляя разработчикам инструментарий для создания широкого спектра приложений, таких как сообщения в реальном времени, IoT, игры, управление сервисами и другими серверами или промежуточным ПО, что значительно расширяет возможности для PHP-разработчиков.
 
 Мы призываем разработчиков не только осваивать Localzet Server, но и активно участвовать в open-source экосистеме, создавая собственные проекты на его основе. Такой подход способствует развитию профессиональных навыков, освоению передовых практик асинхронного программирования и оптимизации производительности. Кроме того, это отличная возможность внести свой вклад в развитие PHP-сообщества и расширить горизонты применения языка в сфере высоконагруженных и распределенных систем.  {{ className: 'lead' }}
 
-<div className="not-prose">
-  <Button
+<Button
     href="/libs"
     variant="text"
     arrow="right"
     children="Проекты на базе Localzet Server"
-  />
-</div>
+/>
 
-<Guides />
+<Guides/>

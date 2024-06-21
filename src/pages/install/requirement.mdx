@@ -34,22 +34,22 @@ PHP-CLI встроенная исполняемая программа, неза
 
 1. [Расширение pcntl](https://www.php.net/manual/ru/book.pcntl.php)
 
-   Расширение `pcntl` является важным для управления процессами в среде Linux, и Localzet Server использует его функции,
-   такие как [fork](https://www.php.net/manual/ru/function.pcntl-fork.php), управление [сигналами](https://www.php.net/manual/ru/function.pcntl-signal.php), [таймеры](https://www.php.net/manual/ru/function.pcntl-alarm.php),
-   [отслеживание состояния процессов](https://www.php.net/manual/ru/function.pcntl-waitpid.php). Это расширение не поддерживается в системе Windows.
+Расширение `pcntl` является важным для управления процессами в среде Linux, и Localzet Server использует его функции,
+такие как [fork](https://www.php.net/manual/ru/function.pcntl-fork.php), управление [сигналами](https://www.php.net/manual/ru/function.pcntl-signal.php), [таймеры](https://www.php.net/manual/ru/function.pcntl-alarm.php),
+[отслеживание состояния процессов](https://www.php.net/manual/ru/function.pcntl-waitpid.php). Это расширение не поддерживается в системе Windows.
 
 2. [Расширение posix](https://www.php.net/manual/ru/book.posix.php)
 
-   Расширение `posix` позволяет PHP в среде Linux вызывать интерфейсы, предоставляемые [стандартом POSIX](https://ru.wikipedia.org/wiki/POSIX).
-   Localzet Server в основном использует этот интерфейс для реализации функций демонизации процессов и управления группами пользователей.
-   Это расширение не поддерживается в системе Windows.
+Расширение `posix` позволяет PHP в среде Linux вызывать интерфейсы, предоставляемые [стандартом POSIX](https://ru.wikipedia.org/wiki/POSIX).
+Localzet Server в основном использует этот интерфейс для реализации функций демонизации процессов и управления группами пользователей.
+Это расширение не поддерживается в системе Windows.
 
 3. [Расширение Event](https://www.php.net/manual/ru/book.event.php)
 
-   Расширение `event` позволяет PHP использовать продвинутые механизмы обработки событий, такие как [Epoll](https://ru.wikipedia.org/wiki/Epoll) и [Kqueue](https://en.wikipedia.org/wiki/Kqueue).
-   Это значительно повышает уровень использования ЦП Localzet Server в условиях высоконагруженных соединений.
-   Важно для приложений с высоконагруженными долгосрочными соединениями.
-   Расширение `libevent` (или `event`) не является обязательным, и если оно не установлено, то по умолчанию используется нативный механизм обработки событий PHP - Select.
+Расширение `event` позволяет PHP использовать продвинутые механизмы обработки событий, такие как [Epoll](https://ru.wikipedia.org/wiki/Epoll) и [Kqueue](https://en.wikipedia.org/wiki/Kqueue).
+Это значительно повышает уровень использования ЦП Localzet Server в условиях высоконагруженных соединений.
+Важно для приложений с высоконагруженными долгосрочными соединениями.
+Расширение `libevent` (или `event`) не является обязательным, и если оно не установлено, то по умолчанию используется нативный механизм обработки событий PHP - Select.
 
 ## Как установить расширения
 

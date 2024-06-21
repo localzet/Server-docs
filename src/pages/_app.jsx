@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import { Router, useRouter } from 'next/router'
-import { MDXProvider } from '@mdx-js/react'
+import {Router, useRouter} from 'next/router'
+import {MDXProvider} from '@mdx-js/react'
 
-import { Layout } from '@/components/Layout'
+import {Layout} from '@/components/Layout'
 import * as mdxComponents from '@/components/mdx'
-import { useMobileNavigationStore } from '@/components/MobileNavigation'
+import {useMobileNavigationStore} from '@/components/MobileNavigation'
 
 import '@/styles/tailwind.css'
 import 'focus-visible'
@@ -16,7 +16,7 @@ function onRouteChange() {
 Router.events.on('routeChangeStart', onRouteChange)
 Router.events.on('hashChangeStart', onRouteChange)
 
-export default function App({ Component, pageProps }) {
+export default function App({Component, pageProps}) {
     let router = useRouter()
 
     return (
@@ -27,7 +27,7 @@ export default function App({ Component, pageProps }) {
                 ) : (
                     <title>{`${pageProps.title} - Protocol API Reference`}</title>
                 )}
-                <meta name="description" content={pageProps.description} />
+                <meta name="description" content={pageProps.description}/>
             </Head>
             <MDXProvider components={mdxComponents}>
                 <Layout {...pageProps}>

@@ -1,5 +1,3 @@
-import {GridPattern} from '@/components/GridPattern'
-
 export function HeroPattern() {
     return (
         <div className="absolute inset-0 -z-10 mx-0 max-w-none flex justify-center overflow-hidden">

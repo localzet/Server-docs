@@ -1,4 +1,4 @@
-import { Head, Html, Main, NextScript } from 'next/document'
+import {Head, Html, Main, NextScript} from 'next/document'
 
 const modeScript = `
   let darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
@@ -36,20 +36,20 @@ const modeScript = `
 `
 
 export default function Document() {
-  return (
-    <Html lang="en">
-        <Head>
-            <script dangerouslySetInnerHTML={{__html: modeScript}}/>
-            <link rel="preconnect" href="https://fonts.googleapis.com"/>
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
-            <link rel="stylesheet" type="text/css"
-                  href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap"/>
+    return (
+        <Html lang="en">
+            <Head>
+                <script dangerouslySetInnerHTML={{__html: modeScript}}/>
+                <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
+                <link rel="stylesheet" type="text/css"
+                      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap"/>
 
-        </Head>
-        <body className="bg-white antialiased dark:bg-slate-900">
-        <Main/>
-        <NextScript/>
-        </body>
-    </Html>
-  )
+            </Head>
+            <body className="bg-white antialiased dark:bg-slate-900">
+            <Main/>
+            <NextScript/>
+            </body>
+        </Html>
+    )
 }

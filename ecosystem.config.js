@@ -1,5 +1,5 @@
 module.exports = {
-    apps : [{
+    apps: [{
         name: "Localzet Docs",
         port: 6001,
         exec_mode: 'cluster',

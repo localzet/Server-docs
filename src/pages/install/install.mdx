@@ -172,13 +172,13 @@ brew install php-event
 
 ## Часто задаваемые вопросы
 1. Если возникает ошибка `checking for include/event2/event.h... not found`, попробуйте сначала удалить пакет libevent-devel и установить libevent2-devel:
-    - **Для системы CentOS**:
-    ```shell
-    yum remove libevent-devel && yum install libevent2-devel
+ - **Для системы CentOS**:
+ ```shell
+ yum remove libevent-devel && yum install libevent2-devel
     ```
-    - **Для систем Debian / Ubuntu**:
-    ```shell
-    apt-get remove libevent-dev && apt-get install libevent2-dev
+ - **Для систем Debian / Ubuntu**:
+ ```shell
+ apt-get remove libevent-dev && apt-get install libevent2-dev
     ```
 
 2. Если возникает ошибка `NOTICE: PHP message: PHP Warning: PHP Startup: Unable to load dynamic library '.../event.so' - ..../event.so: undefined symbol: php_sockets_le_socket in Unknown on line 0`, измените порядок загрузки `event.so` и `socket.so`, то есть добавьте `extension=socket.so` перед `extension=event.so` в файле php.ini, чтобы сначала загрузилось расширение socket.
