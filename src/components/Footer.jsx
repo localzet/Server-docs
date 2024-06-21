@@ -105,20 +105,20 @@ function PageLink({ label, page, previous = false }) {
     <>
       <Button
         href={page.href}
-        aria-label={`${label}: ${page.title}`}
+        aria-label={page.title}
         variant="secondary"
         arrow={previous ? 'left' : 'right'}
       >
-        {label}
-      </Button>
-      <Link
-        href={page.href}
-        tabIndex={-1}
-        aria-hidden="true"
-        className="text-base font-semibold text-slate-900 transition hover:text-slate-600 dark:text-white dark:hover:text-slate-300"
-      >
         {page.title}
-      </Link>
+      </Button>
+      {/*<Link*/}
+      {/*  href={page.href}*/}
+      {/*  tabIndex={-1}*/}
+      {/*  aria-hidden="true"*/}
+      {/*  className="text-base font-semibold text-slate-900 transition hover:text-slate-600 dark:text-white dark:hover:text-slate-300"*/}
+      {/*>*/}
+      {/*  {page.title}*/}
+      {/*</Link>*/}
     </>
   )
 }
@@ -220,7 +220,7 @@ export function Footer() {
 
   return (
     <footer className="mx-auto max-w-2xl space-y-10 pb-16 lg:max-w-5xl">
-      <Feedback key={router.pathname} />
+      {/*<Feedback key={router.pathname} />*/}
       <PageNavigation />
       <SmallPrint />
     </footer>
