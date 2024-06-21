@@ -187,28 +187,28 @@ export const navigation = [
   {
     title: 'Введение',
     links: [
-      { title: 'Предисловие', href: '/' },
-      { title: 'Принцип работы', href: '/principle' },
-      { title: 'Важные отличия', href: '/must-read' },
+      { title: 'Обзор', href: '/' },
       { title: 'Преимущества', href: '/features' },
-      { title: 'Простой пример', href: '/example' },
+      { title: 'Принцип работы', href: '/principle' },
+      { title: 'Примеры использования', href: '/example' },
     ],
   },
   {
     title: 'Установка',
     links: [
+      { title: 'Предупреждения', href: '/must-read' },
       { title: 'Системные требования', href: '/install/requirement' },
-      { title: 'Загрузка и установка', href: '/install/install' },
-      { title: 'Запуск и остановка', href: '/install/start-and-stop' },
+      { title: 'Установка и настройка', href: '/install/install' },
+      { title: 'Запуск и управление', href: '/install/start-and-stop' },
     ],
   },
   {
     title: 'Разработка',
     links: [
-      { title: 'Перед началом', href: '/development/before' },
+     // { title: 'Перед началом', href: '/development/before' },
       { title: 'Структура', href: '/development/structure' },
       { title: 'Основной процесс', href: '/development/process' },
-      { title: 'Рекомендации', href: '/development/standard' },
+     // { title: 'Рекомендации', href: '/development/standard' },
     ],
   },
   {
