@@ -126,7 +126,7 @@ function CodePanel({ tag, label, code, children }) {
         label={child.props.label ?? label}
       />
       <div className="relative">
-        <pre className="overflow-x-auto p-4 text-xs text-white">{children}</pre>
+        <pre className="not-prose overflow-x-auto p-4 text-xs text-white">{children}</pre>
         <CopyButton code={child.props.code ?? code} />
       </div>
     </div>
@@ -265,12 +265,12 @@ export function CodeGroup({ children, title, ...props }) {
     <CodeGroupContext.Provider value={true}>
       <Container
         {...containerProps}
-        className="not-prose my-6 overflow-hidden rounded-2xl bg-slate-900 shadow-md dark:ring-1 dark:ring-white/10"
+        className="my-6 overflow-hidden rounded-2xl bg-slate-900 shadow-md dark:ring-1 dark:ring-white/10"
       >
         <CodeGroupHeader title={title} {...headerProps}>
           {children}
         </CodeGroupHeader>
-        <CodeGroupPanels {...props}>{children}</CodeGroupPanels>
+        <CodeGroupPanels className="not-prose" {...props}>{children}</CodeGroupPanels>
       </Container>
     </CodeGroupContext.Provider>
   )
