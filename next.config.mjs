@@ -14,6 +14,9 @@ const withMDX = nextMDX({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    // outDir: 'dist',
+    // output: 'export',
+    // assetPrefix: process.env.NODE_ENV === 'production' ? '/server' : '',
     reactStrictMode: true,
     pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
     experimental: {

@@ -205,9 +205,20 @@ export const navigation = [
   {
     title: 'Разработка',
     links: [
-      { title: 'Системные требования', href: '/install/requirement' },
-      { title: 'Загрузка и установка', href: '/install/install' },
-      { title: 'Запуск и остановка', href: '/install/start-and-stop' },
+      { title: 'Перед началом', href: '/development/before' },
+      { title: 'Структура', href: '/development/structure' },
+      { title: 'Основной процесс', href: '/development/process' },
+      { title: 'Рекомендации', href: '/development/standard' },
+    ],
+  },
+  {
+    title: 'HTTP',
+    links: [
+      { title: 'Запрос', href: '/http/request' },
+      { title: 'Ответ', href: '/http/response' },
+      { title: 'Сессия', href: '/http/session' },
+      { title: 'Управление сессией', href: '/http/session-control' },
+      { title: 'SSE', href: '/http/SSE' },
     ],
   },
   // {

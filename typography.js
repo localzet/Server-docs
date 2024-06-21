@@ -1,3 +1,5 @@
+// zinc => slate
+// emerald => sky
 module.exports = ({theme}) => ({
     DEFAULT: {
         css: {
