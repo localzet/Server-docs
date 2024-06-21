@@ -46,7 +46,7 @@ export default function Document() {
                   href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap"/>
 
         </Head>
-        <body className="bg-white antialiased dark:bg-zinc-900">
+        <body className="bg-white antialiased dark:bg-slate-900">
         <Main/>
         <NextScript/>
         </body>
