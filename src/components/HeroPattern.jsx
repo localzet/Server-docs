@@ -17,7 +17,5 @@ export function HeroPattern() {
                 </picture>
             </div>
         </div>
-
-
     )
 }
