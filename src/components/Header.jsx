@@ -56,18 +56,18 @@ export const Header = forwardRef(function Header({className}, ref) {
             <div className="flex items-center gap-5 lg:hidden">
                 <MobileNavigation/>
                 <Link href="/" aria-label="Home">
-                    <Logo className="h-6"/>
+                    <Logo />
                 </Link>
             </div>
             <div className="flex items-center gap-5">
-                <nav className="hidden md:block">
-                    <ul role="list" className="flex items-center gap-8">
-                        <TopLevelNavItem href="/">API</TopLevelNavItem>
-                        <TopLevelNavItem href="#">Documentation</TopLevelNavItem>
-                        <TopLevelNavItem href="#">Support</TopLevelNavItem>
-                    </ul>
-                </nav>
-                <div className="hidden md:block md:h-5 md:w-px md:bg-slate-900/10 md:dark:bg-white/15"/>
+                {/*<nav className="hidden md:block">*/}
+                {/*    <ul role="list" className="flex items-center gap-8">*/}
+                {/*        <TopLevelNavItem href="/">API</TopLevelNavItem>*/}
+                {/*        <TopLevelNavItem href="#">Documentation</TopLevelNavItem>*/}
+                {/*        <TopLevelNavItem href="#">Support</TopLevelNavItem>*/}
+                {/*    </ul>*/}
+                {/*</nav>*/}
+                {/*<div className="hidden md:block md:h-5 md:w-px md:bg-slate-900/10 md:dark:bg-white/15"/>*/}
                 <div className="flex gap-4">
                     <MobileSearch/>
                     <ModeToggle/>

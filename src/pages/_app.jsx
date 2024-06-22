@@ -23,11 +23,12 @@ export default function App({Component, pageProps}) {
         <>
             <Head>
                 {router.pathname === '/' ? (
-                    <title>Protocol API Reference</title>
+                    <title>Localzet Documentation</title>
                 ) : (
-                    <title>{`${pageProps.title} - Protocol API Reference`}</title>
+                    <title>{`${pageProps.title} - Localzet Docs`}</title>
                 )}
                 <meta name="description" content={pageProps.description}/>
+                <link rel="icon" href="/server.png" />
             </Head>
             <MDXProvider components={mdxComponents}>
                 <Layout {...pageProps}>
