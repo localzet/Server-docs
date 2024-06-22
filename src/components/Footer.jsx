@@ -195,7 +195,7 @@ function SocialLink({href, icon: Icon, children}) {
         <Link href={href} className="group">
             <span className="sr-only">{children}</span>
             <Icon
-                className="h-5 w-5 fill-slate-700 transition group-hover:fill-slate-900 dark:group-hover:fill-slate-500"/>
+                className="h-6 w-6 fill-slate-700 transition group-hover:fill-slate-900 dark:group-hover:fill-slate-500"/>
         </Link>
     )
 }
@@ -205,7 +205,7 @@ function SmallPrint() {
         <div
             className="flex flex-col items-center justify-between gap-5 border-t border-slate-900/5 pt-8 dark:border-white/5 sm:flex-row">
             <p className="text-xs text-slate-600 dark:text-slate-400">
-                Copyright &copy; {new Date().getFullYear()} <a href="https://www.localzet.com">Localzet Group</a>. All
+                Copyright &copy; {new Date().getFullYear()} <a className="hover:text-sky-600 dark:hover:text-sky-400" href="https://www.localzet.com">Localzet Group</a>. All
                 rights reserved.
             </p>
             <div className="flex gap-4">
@@ -216,7 +216,7 @@ function SmallPrint() {
                     Follow us on GitHub
                 </SocialLink>
                 <SocialLink href="https://vk.com/localzet_dev" icon={VKIcon}>
-                    Follow us on Vkontakte
+                    Follow us on VKontakte
                 </SocialLink>
             </div>
         </div>

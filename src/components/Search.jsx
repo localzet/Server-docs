@@ -272,7 +272,7 @@ function SearchButton(props) {
                 aria-label="Найдите что-нибудь..."
                 {...props}
             >
-                <SearchIcon className="h-5 w-5 stroke-slate-900 dark:stroke-white"/>
+                <SearchIcon className="h-6 w-6 stroke-slate-900 dark:stroke-white"/>
             </button>
         </>
     )
@@ -455,7 +455,7 @@ export function MobileSearch() {
                 aria-label="Найдите что-нибудь..."
                 {...buttonProps}
             >
-                <SearchIcon className="h-5 w-5 stroke-slate-900 dark:stroke-white"/>
+                <SearchIcon className="h-6 w-6 stroke-slate-900 dark:stroke-white"/>
             </button>
             <SearchDialog className="lg:hidden" {...dialogProps} />
         </div>

@@ -47,8 +47,8 @@ export function ModeToggle() {
             aria-label="Toggle dark mode"
             onClick={toggleMode}
         >
-            <SunIcon className="h-5 w-5 stroke-slate-900 dark:hidden"/>
-            <MoonIcon className="hidden h-5 w-5 stroke-white dark:block"/>
+            <SunIcon className="h-6 w-6 stroke-slate-900 dark:hidden"/>
+            <MoonIcon className="hidden h-6 w-6 stroke-white dark:block"/>
         </button>
     )
 }

@@ -41,7 +41,8 @@ module.exports = ({theme}) => ({
 
             // Base
             color: 'var(--tw-prose-body)',
-            fontSize: theme('fontSize.sm')[0],
+            fontSize: theme('fontSize.base')[0],
+            ...theme('fontSize.base')[1],
             lineHeight: theme('lineHeight.7'),
 
             // Layout
@@ -61,10 +62,10 @@ module.exports = ({theme}) => ({
                 marginTop: theme('spacing.6'),
                 marginBottom: theme('spacing.6'),
             },
-            '[class~="lead"]': {
-                fontSize: theme('fontSize.base')[0],
-                ...theme('fontSize.base')[1],
-            },
+            // '[class~="lead"]': {
+            //     fontSize: theme('fontSize.base')[0],
+            //     ...theme('fontSize.base')[1],
+            // },
 
             // Lists
             ol: {

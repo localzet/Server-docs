@@ -23,9 +23,9 @@ export default function App({Component, pageProps}) {
         <>
             <Head>
                 {router.pathname === '/' ? (
-                    <title>Localzet Documentation</title>
+                    <title>Localzet Server</title>
                 ) : (
-                    <title>{`${pageProps.title} - Localzet Docs`}</title>
+                    <title>{`${pageProps.title} - Localzet Server`}</title>
                 )}
                 <meta name="description" content={pageProps.description}/>
                 <link rel="icon" href="/server.png" />
