@@ -22,22 +22,22 @@ export default function App({Component, pageProps}) {
     return (
         <>
             <Head>
-                {router.pathname === '/' && pageProps.title ? (
+                {router.pathname === '/' && (pageProps.title || pageProps.pageTitle) ? (
                     <title>Localzet Server</title>
                 ) : (
-                    <title>{`${pageProps.title} - Localzet Server`}</title>
+                    <title>{`${pageProps.pageTitle ?? pageProps.title} - Localzet Server`}</title>
                 )}
                 <meta charSet="utf-8"/>
 
                 <meta name="title"
-                      content={pageProps.title ? `${pageProps.title} - Localzet Server` : 'Localzet Server'}/>
+                      content={(pageProps.pageTitle ?? pageProps.title) ? `${pageProps.pageTitle ?? pageProps.title} - Localzet Server` : 'Localzet Server'}/>
                 <meta name="description"
                       content={pageProps.description ?? 'Localzet Server is an asynchronous event-based server in PHP, offering high performance and scalability using modern technologies and standards'}/>
                 <meta name="keywords" content={pageProps.keywords}/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
                 <meta name="og:title"
-                      content={pageProps.title ? `${pageProps.title} - Localzet Server` : 'Localzet Server'}/>
+                      content={(pageProps.pageTitle ?? pageProps.title) ? `${pageProps.pageTitle ?? pageProps.title} - Localzet Server` : 'Localzet Server'}/>
                 <meta name="og:description"
                       content={pageProps.description ?? 'Localzet Server is an asynchronous event-based server in PHP, offering high performance and scalability using modern technologies and standards.'}/>
                 <meta name="og:image"
@@ -50,7 +50,7 @@ export default function App({Component, pageProps}) {
                 <meta property="twitter:card" content="summary_large_image"/>
                 <meta property="twitter:url" content={`https://docs.localzet.com${router.asPath}`}/>
                 <meta property="twitter:title"
-                      content={pageProps.title ? `${pageProps.title} - Localzet Server` : 'Localzet Server'}/>
+                      content={(pageProps.pageTitle ?? pageProps.title) ? `${pageProps.pageTitle ?? pageProps.title} - Localzet Server` : 'Localzet Server'}/>
                 <meta property="twitter:description"
                       content={pageProps.description ?? 'Localzet Server is an asynchronous event-based server in PHP, offering high performance and scalability using modern technologies and standards.'}/>
                 <meta name="twitter:image"
