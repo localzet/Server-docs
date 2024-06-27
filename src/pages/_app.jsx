@@ -22,12 +22,15 @@ export default function App({Component, pageProps}) {
     return (
         <>
             <Head>
+                <meta charSet="utf-8"/>
+                <meta name="language" content="RU"/>
+                <meta name="robots" content="index,follow"/>
+
                 {router.pathname === '/' && (pageProps.title || pageProps.pageTitle) ? (
                     <title>Localzet Server</title>
                 ) : (
                     <title>{`${pageProps.pageTitle ?? pageProps.title} - Localzet Server`}</title>
                 )}
-                <meta charSet="utf-8"/>
 
                 <meta name="title"
                       content={(pageProps.pageTitle ?? pageProps.title) ? `${pageProps.pageTitle ?? pageProps.title} - Localzet Server` : 'Localzet Server'}/>
@@ -36,16 +39,16 @@ export default function App({Component, pageProps}) {
                 <meta name="keywords" content={pageProps.keywords}/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
+                <meta name="og:locale" content="ru_RU"/>
+                <meta name="og:type" content="website"/>
+                <meta name="og:url" content={`https://docs.localzet.com${router.asPath}`}/>
+                <meta name="og:site_name" content="Localzet Server"/>
                 <meta name="og:title"
                       content={(pageProps.pageTitle ?? pageProps.title) ? `${pageProps.pageTitle ?? pageProps.title} - Localzet Server` : 'Localzet Server'}/>
                 <meta name="og:description"
                       content={pageProps.description ?? 'Localzet Server is an asynchronous event-based server in PHP, offering high performance and scalability using modern technologies and standards.'}/>
                 <meta name="og:image"
-                      content={`https://cover.pr-cy.io/api/og?logo=https%3A%2F%2Fdocs.localzet.com%2Fserver.png&bgColor=0f172a&color=ffffff&title=${encodeURIComponent(pageProps.title ?? 'Localzet Server')}&category=${encodeURIComponent('Доументация - Localzet Server')}`}/>
-                <meta name="og:url" content={`https://docs.localzet.com${router.asPath}`}/>
-                <meta name="og:type" content="website"/>
-                <meta name="og:locale" content="ru_RU"/>
-                <meta name="og:site_name" content="Localzet Server"/>
+                      content={`https://cover.pr-cy.io/api/og?logo=${encodeURIComponent('https://docs.localzet.com/server.png')}&bgColor=0f172a&color=ffffff&title=${encodeURIComponent(pageProps.title ?? 'Localzet Server')}&category=${encodeURIComponent('Доументация - Localzet Server')}`}/>
 
                 <meta property="twitter:card" content="summary_large_image"/>
                 <meta property="twitter:url" content={`https://docs.localzet.com${router.asPath}`}/>
@@ -55,9 +58,6 @@ export default function App({Component, pageProps}) {
                       content={pageProps.description ?? 'Localzet Server is an asynchronous event-based server in PHP, offering high performance and scalability using modern technologies and standards.'}/>
                 <meta name="twitter:image"
                       content={`https://cover.pr-cy.io/api/og?logo=https%3A%2F%2Fdocs.localzet.com%2Fserver.png&bgColor=0f172a&color=ffffff&title=${encodeURIComponent(pageProps.title ?? 'Localzet Server')}&category=${encodeURIComponent('Доументация - Localzet Server')}`}/>
-
-                <meta name="language" content="RU"/>
-                <meta name="robots" content="index,follow"/>
 
                 <meta name="apple-mobile-web-app-capable" content="yes"/>
                 <meta name="apple-touch-fullscreen" content="yes"/>
@@ -79,7 +79,7 @@ export default function App({Component, pageProps}) {
                 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f172a"/>
                 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff"/>
 
-                <link rel="icon" type="image/png" href="/server.png"/>
+                <link rel="icon" type="image/png" href="https://docs.localzet.com/server.png"/>
                 <link rel="canonical" href={`https://docs.localzet.com${router.asPath}`}/>
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
