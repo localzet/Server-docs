@@ -83,6 +83,8 @@ export default function App({Component, pageProps}) {
                 <link rel="canonical" href={`https://docs.localzet.com${router.asPath}`}/>
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
+
+                <script defer src="https://analytics.localzet.com/pixel/kVPOX8AON9L4UkO8" data-ignore-dnt="true"></script>
             </Head>
             <MDXProvider components={mdxComponents}>
                 <Layout {...pageProps}>
