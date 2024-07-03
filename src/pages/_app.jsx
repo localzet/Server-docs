@@ -40,8 +40,9 @@ export default function App({Component, pageProps}) {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
                 <meta name="og:locale" content="ru_RU"/>
-                <meta name="og:type" content="website"/>
+                <meta name="og:type" content="product" />
                 <meta name="og:url" content={`https://docs.localzet.com${router.asPath}`}/>
+                <meta name="og:site" content="Localzet Server"/>
                 <meta name="og:site_name" content="Localzet Server"/>
                 <meta name="og:title"
                       content={(pageProps.pageTitle ?? pageProps.title) ? `${pageProps.pageTitle ?? pageProps.title} - Localzet Server` : 'Localzet Server'}/>
@@ -49,14 +50,21 @@ export default function App({Component, pageProps}) {
                       content={pageProps.description ?? 'Localzet Server is an asynchronous event-based server in PHP, offering high performance and scalability using modern technologies and standards.'}/>
                 <meta name="og:image"
                       content={`https://cover.pr-cy.io/api/og?logo=${encodeURIComponent('https://docs.localzet.com/server.png')}&bgColor=0f172a&color=ffffff&title=${encodeURIComponent(pageProps.title ?? 'Localzet Server')}&category=${encodeURIComponent('Доументация - Localzet Server')}`}/>
+                <meta name="og:image:type" content="image/png"/>
+                <meta name="og:image:width" content="1200"/>
+                <meta name="og:image:height" content="630"/>
 
-                <meta property="twitter:card" content="summary_large_image"/>
-                <meta property="twitter:url" content={`https://docs.localzet.com${router.asPath}`}/>
-                <meta property="twitter:title"
+                <meta name="twitter:card" content="summary_large_image"/>
+                <meta name="twitter:creator" content="@localzet"/>
+                <meta name="twitter:url" content={`https://docs.localzet.com${router.asPath}`}/>
+                <meta name="twitter:site_name" content="Localzet Server"/>
+                <meta name="twitter:title"
                       content={(pageProps.pageTitle ?? pageProps.title) ? `${pageProps.pageTitle ?? pageProps.title} - Localzet Server` : 'Localzet Server'}/>
-                <meta property="twitter:description"
+                <meta name="twitter:description"
                       content={pageProps.description ?? 'Localzet Server is an asynchronous event-based server in PHP, offering high performance and scalability using modern technologies and standards.'}/>
                 <meta name="twitter:image"
+                      content={`https://cover.pr-cy.io/api/og?logo=https%3A%2F%2Fdocs.localzet.com%2Fserver.png&bgColor=0f172a&color=ffffff&title=${encodeURIComponent(pageProps.title ?? 'Localzet Server')}&category=${encodeURIComponent('Доументация - Localzet Server')}`}/>
+                <meta name="twitter:image:src"
                       content={`https://cover.pr-cy.io/api/og?logo=https%3A%2F%2Fdocs.localzet.com%2Fserver.png&bgColor=0f172a&color=ffffff&title=${encodeURIComponent(pageProps.title ?? 'Localzet Server')}&category=${encodeURIComponent('Доументация - Localzet Server')}`}/>
 
                 <meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -84,7 +92,8 @@ export default function App({Component, pageProps}) {
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
 
-                <script defer src="https://analytics.localzet.com/pixel/kVPOX8AON9L4UkO8" data-ignore-dnt="true"></script>
+                <script defer src="https://analytics.localzet.com/pixel/kVPOX8AON9L4UkO8"
+                        data-ignore-dnt="true"></script>
             </Head>
             <MDXProvider components={mdxComponents}>
                 <Layout {...pageProps}>
