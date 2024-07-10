@@ -2,9 +2,9 @@
 
 export function Logo() {
     return (
-        <div className="h-10">
-            <img src="/server-full-dark.png" className="block dark:hidden h-10" alt="Logo"/>
-            <img src="/server-full-light.png" className="hidden dark:block h-10" alt="Logo"/>
+        <div className="h-8 w-full">
+            <img src='/logo-dark.png' className="block dark:hidden w-full h-auto max-h-8 mt-1" alt="Triangle Web"></img>
+            <img src='/logo-light.png' className="hidden dark:block w-full h-auto max-h-8 mt-1" alt="Triangle Web"></img>
         </div>
     )
 }
