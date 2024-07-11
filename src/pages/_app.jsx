@@ -49,7 +49,7 @@ export default function App({Component, pageProps}) {
                 <meta name="og:description"
                       content={pageProps.description ?? 'Localzet Server is an asynchronous event-based server in PHP, offering high performance and scalability using modern technologies and standards.'}/>
                 <meta name="og:image"
-                      content={`https://cover.pr-cy.io/api/og?logo=${encodeURIComponent('https://docs.localzet.com/server.png')}&bgColor=0f172a&color=ffffff&title=${encodeURIComponent(pageProps.title ?? 'Localzet Server')}&category=${encodeURIComponent('Доументация - Localzet Server')}`}/>
+                      content={`https://cover.pr-cy.io/api/og?logo=${encodeURIComponent('https://docs.localzet.com/favicon.png')}&bgColor=0f172a&color=E6E7E8&title=${encodeURIComponent(pageProps.title ?? 'Localzet Server')}&category=${encodeURIComponent('Доументация - Localzet Server')}`}/>
                 <meta name="og:image:type" content="image/png"/>
                 <meta name="og:image:width" content="1200"/>
                 <meta name="og:image:height" content="630"/>
@@ -63,9 +63,9 @@ export default function App({Component, pageProps}) {
                 <meta name="twitter:description"
                       content={pageProps.description ?? 'Localzet Server is an asynchronous event-based server in PHP, offering high performance and scalability using modern technologies and standards.'}/>
                 <meta name="twitter:image"
-                      content={`https://cover.pr-cy.io/api/og?logo=https%3A%2F%2Fdocs.localzet.com%2Fserver.png&bgColor=0f172a&color=ffffff&title=${encodeURIComponent(pageProps.title ?? 'Localzet Server')}&category=${encodeURIComponent('Доументация - Localzet Server')}`}/>
+                      content={`https://cover.pr-cy.io/api/og?logo=${encodeURIComponent('https://docs.localzet.com/favicon.png')}&bgColor=0f172a&color=E6E7E8&title=${encodeURIComponent(pageProps.title ?? 'Localzet Server')}&category=${encodeURIComponent('Доументация - Localzet Server')}`}/>
                 <meta name="twitter:image:src"
-                      content={`https://cover.pr-cy.io/api/og?logo=https%3A%2F%2Fdocs.localzet.com%2Fserver.png&bgColor=0f172a&color=ffffff&title=${encodeURIComponent(pageProps.title ?? 'Localzet Server')}&category=${encodeURIComponent('Доументация - Localzet Server')}`}/>
+                      content={`https://cover.pr-cy.io/api/og?logo=${encodeURIComponent('https://docs.localzet.com/favicon.png')}&bgColor=0f172a&color=E6E7E8&title=${encodeURIComponent(pageProps.title ?? 'Localzet Server')}&category=${encodeURIComponent('Доументация - Localzet Server')}`}/>
 
                 <meta name="apple-mobile-web-app-capable" content="yes"/>
                 <meta name="apple-touch-fullscreen" content="yes"/>
@@ -85,9 +85,9 @@ export default function App({Component, pageProps}) {
                 <meta name="generator" content="Triangle Framework"/>
 
                 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f172a"/>
-                <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff"/>
+                <meta name="theme-color" media="(prefers-color-scheme: light)" content="#E6E7E8"/>
 
-                <link rel="icon" type="image/png" href="https://docs.localzet.com/server.png"/>
+                <link rel="icon" type="image/png" href="https://docs.localzet.com/favicon.png"/>
                 <link rel="canonical" href={`https://docs.localzet.com${router.asPath}`}/>
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
