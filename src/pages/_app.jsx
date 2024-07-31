@@ -8,6 +8,7 @@ import {useMobileNavigationStore} from '@/components/MobileNavigation'
 
 import '@/styles/tailwind.css'
 import 'focus-visible'
+import Script from "next/script";
 
 function onRouteChange() {
     useMobileNavigationStore.getState().close()
@@ -40,7 +41,7 @@ export default function App({Component, pageProps}) {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
                 <meta name="og:locale" content="ru_RU"/>
-                <meta name="og:type" content="product" />
+                <meta name="og:type" content="product"/>
                 <meta name="og:url" content={`https://docs.localzet.com${router.asPath}`}/>
                 <meta name="og:site" content="Localzet Server"/>
                 <meta name="og:site_name" content="Localzet Server"/>
@@ -90,11 +91,12 @@ export default function App({Component, pageProps}) {
                 <link rel="icon" type="image/png" href="https://docs.localzet.com/favicon.png"/>
                 <link rel="canonical" href={`https://docs.localzet.com${router.asPath}`}/>
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
-
-                <script defer src="https://analytics.localzet.com/pixel/kVPOX8AON9L4UkO8"
-                        data-ignore-dnt="true"></script>
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
             </Head>
+
+            <Script defer src="https://analytics.localzet.com/pixel/kVPOX8AON9L4UkO8"
+                    data-ignore-dnt="true"/>
+
             <MDXProvider components={mdxComponents}>
                 <Layout {...pageProps}>
                     <Component {...pageProps} />
