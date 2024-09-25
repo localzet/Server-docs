@@ -210,6 +210,13 @@ export const navigation = [
         ],
     },
     {
+        title: 'Протоколы',
+        links: [
+            {title: 'Что за протоколы?', href: '/protocols'},
+            {title: 'Классы протоколов', href: '/protocols/custom'},
+        ],
+    },
+    {
         title: 'HTTP',
         links: [
             {title: 'Запрос', href: '/http/request'},

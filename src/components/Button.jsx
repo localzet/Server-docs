@@ -53,10 +53,12 @@ export function Button({
     )
 
     return (
-        <Component className={className} {...props}>
-            {arrow === 'left' && arrowIcon}
-            {children}
-            {arrow === 'right' && arrowIcon}
-        </Component>
+        <p>
+            <Component className={className} {...props}>
+                {arrow === 'left' && arrowIcon}
+                {children}
+                {arrow === 'right' && arrowIcon}
+            </Component>
+        </p>
     )
 }
